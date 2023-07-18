@@ -1,0 +1,38 @@
+<script lang="ts">
+  interface Props {
+    stagger?: boolean;
+  }
+
+  // const { stagger = false } = Astro.props;
+  export let stagger = false
+</script>
+
+<div class='card-grid' class:stagger>
+  <slot />
+</div>
+
+<style>
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card-grid > :global(*) {
+    margin-top: 0 !important;
+  }
+
+  @media (min-width: 50rem) {
+    .card-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .stagger {
+      --stagger-height: 5rem;
+      padding-bottom: var(--stagger-height);
+    }
+
+    .stagger > :global(*):nth-child(2n) {
+      transform: translateY(var(--stagger-height));
+    }
+  }
+</style>
