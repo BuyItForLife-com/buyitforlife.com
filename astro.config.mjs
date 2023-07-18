@@ -6,22 +6,14 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: 'My Docs',
+    title: 'Buy It For Life',
     social: {
-      github: 'https://github.com/withastro/starlight'
+      github: 'https://github.com/BuyItForLife-com/buyitforlife.com'
     },
     sidebar: [{
-      label: 'Guides',
-      items: [
-      // Each item here is one entry in the navigation menu.
-      {
-        label: 'Example Guide',
-        link: '/guides/example/'
-      }]
-    }, {
-      label: 'Reference',
+      label: 'Categories',
       autogenerate: {
-        directory: 'reference'
+        directory: 'categories'
       }
     }]
   }), tailwind()],
