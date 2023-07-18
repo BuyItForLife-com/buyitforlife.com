@@ -1,9 +1,4 @@
 <script lang="ts">
-  interface Props {
-    stagger?: boolean;
-  }
-
-  // const { stagger = false } = Astro.props;
   export let stagger = false
 </script>
 

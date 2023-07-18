@@ -1,12 +1,6 @@
 <script lang="ts">
   // import Icon from './Icon.svelte';
 
-  // interface Props {
-  //   icon?: string
-  //   title: string;
-  // }
-
-  // const { icon, title } = Astro.props;
   export const icon = ''
   export let title = "Card Title PLaceholder"
 </script>
